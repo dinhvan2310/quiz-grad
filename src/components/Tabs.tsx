@@ -41,7 +41,7 @@ function TabsComponent(props: TabsComponentProps) {
                                 index !== items.length - 1 ? "16px" : "0px",
                         }}
                         onClick={() => {
-                            onChange(item.key);
+                            if (!item.disabled) onChange(item.key);
                         }}
                     >
                         <Row justifyContent="center">

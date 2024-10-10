@@ -15,7 +15,6 @@ function Text({ text, type, className = "", style, onPress }: TextProps) {
                 className={`
                     text-lg
                     font-bold
-                    text-title
                     ${className}    
                 `}
                 style={style}
@@ -45,7 +44,6 @@ function Text({ text, type, className = "", style, onPress }: TextProps) {
                 className={`
                     text-3xl
                     font-bold
-                    text-title
                     ${className}   
                 `}
                 style={style}
@@ -61,7 +59,6 @@ function Text({ text, type, className = "", style, onPress }: TextProps) {
                 className={`
                     text-base
                     text-link
-                    text-primary
                     cursor-pointer
                     ${className}
                 `}

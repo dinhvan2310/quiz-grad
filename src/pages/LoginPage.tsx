@@ -7,6 +7,7 @@ import Input from "../components/Input";
 import Space from "../components/Space";
 import CheckBox from "../components/CheckBox";
 import Button from "../components/Button";
+import Banner from "../../src/assets/banner.png";
 
 function LoginPage() {
     // state
@@ -74,23 +75,7 @@ function LoginPage() {
             <Row className="h-full p-4" justifyContent="space-between">
                 <div style={{}}>
                     <Row>
-                        <Text
-                            text="Quiz"
-                            type="logo"
-                            style={{
-                                fontSize: 92,
-                                lineHeight: "92px",
-                            }}
-                        />
-                        <Text
-                            text="Grad"
-                            type="logo"
-                            className="text-primary"
-                            style={{
-                                fontSize: 92,
-                                lineHeight: "92px",
-                            }}
-                        />
+                        <img src={Banner} alt="Banner" />
                     </Row>
                     <div className="w-full flex justify-end">
                         <div className="flex flex-col items-center">
@@ -122,13 +107,18 @@ function LoginPage() {
                             type="password"
                         />
                         <Space height={16} />
-                        <Row justifyContent="space-between">
+                        <Row justifyContent="flex-start">
                             <CheckBox
                                 label="Remember me"
                                 checked={rememberMe}
                                 onChange={setRememberMe}
                             />
-                            <Text text="Forgot password?" type="link" />
+                            <Space width={16} />
+                            <Text
+                                text="Forgot password?"
+                                type="link"
+                                className="text-primary"
+                            />
                         </Row>
                         <Space height={16} />
                         <Button
@@ -137,7 +127,11 @@ function LoginPage() {
                             onClick={() => {}}
                         />
                         <Space height={16} />
-                        <Text text="Register now" type="link" />
+                        <Text
+                            text="Register now"
+                            type="link"
+                            className="text-primary"
+                        />
                     </div>
                     {/* // form ----------------- */}
                 </div>
